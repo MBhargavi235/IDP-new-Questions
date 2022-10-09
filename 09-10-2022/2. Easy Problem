@@ -1,0 +1,62 @@
+Easy Problem
+Ram went to the store to buy chocolates. In addition to the chocolate he likes, the chocolate box also contains other chocolates he doesn't like. 
+He told the shopkeeper he would purchase the chocolate box if it contained more than half of the chocolates he liked. Each chocolate price is one rupee.
+To make Ram purchase a chocolate box, the shopkeeper must remove the minimum number of chocolates that Ram dislikes.
+
+Write a program to print the final cost of the chocolate box.
+
+Input
+The first line of input contains an integer T representing the number of test cases. The next T lines of input contain the string B and character
+by space separated.
+Where,
+The string B represents the chocolate box (each character represents a chocolate).
+• The character
+represents the chocolate that Ram likes.
+
+For example, if the given test cases are 2,
+
+Test case 1: 
+B = acaa
+L-a
+
+• The chocolate box contained more than half of the chocolates
+Ram liked.
+. The number of chocolates in the box is 4, each costs one rupee.
+. So the output is 4.
+
+Test case 2:
+
+B = bobca
+
+The chocolate box does not contained more than half of the chocolates Ram liked. To make Ram purchase a chocolate box, shopkeeper needs to remove 2b S. Then the chocolate box
+will have 2 c s and 1 a chocolates, . The number of chocolates in the box is 3, each costs one rupee.
+. So the output is 3.
+
+Input1:
+2
+acaa a 
+bcbca c
+Ouput:
+4
+3
+
+Input2:
+2 
+xaxxxxa a
+aaabaa b
+Ouput:
+3
+1
+
+Solution:
+
+t=int(input())
+for i in range(t):
+    a,b=input().split()
+    c=a.count(b)
+    d=len(a)
+    e=d-c
+    if e<c:
+        print(d)
+    else:
+        print(2*c-1)
