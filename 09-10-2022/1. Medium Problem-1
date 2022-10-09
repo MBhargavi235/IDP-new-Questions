@@ -1,0 +1,56 @@
+Medium Problem - 1
+The building contains different rooms, some of them are dangerous and some of them are safe. There is one person standing outside each room, and the rooms are adjacent to each other.
+Dangerous rooms are labelled with the letter d, and safe rooms are labelled with the letter s. Everyone wants to go into the safe room. For that, they need to take steps toward a safe room.
+Consider one step to move to an adjacent room, and write a program for each person that prints the minimum steps required to reach the safe room.
+
+Input
+The first line of input contains an integer T representing the number of test cases, The next T lines of input contain string R representing the rooms, each room labelled with d or s letters, based on the type of room.
+
+Output
+The output should be Tlines containing space-separated integers representing minimum steps required to reach the safe room.
+
+Sample Input1:
+2
+sddsd
+sdddds
+Output:
+0 1 1 0 1 
+0 1 2 2 1 0 
+
+Sample Input2:
+2
+sddddds
+dss
+Output:
+0 1 2 3 2 1 0 
+1 0 0
+
+Solution:
+
+t = int(input())
+for i in range(t):
+    a = input()
+    b = ""
+    for k in range(len(a)):
+        j = a[k]
+        if j == "s":
+            b += "0 "
+        else:
+            m = j
+            n = 1
+            v = True
+            while v:
+                if (k-n) >= 0:
+                    if a[k-n] == "s":
+                        c= str(n) + " "
+                        v = False
+                if (k+n) < len(a):
+                    if  a[k+n] == "s":
+                        c= str(n) + " "
+                        v = False
+                if v == False:
+                    b += c
+                    break
+                else:
+                    n += 1
+    print(b)
