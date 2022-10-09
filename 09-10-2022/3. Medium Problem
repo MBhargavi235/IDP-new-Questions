@@ -1,0 +1,48 @@
+Medium Problem - 2
+
+Tina is a mathematics teacher. She gave multiple baskets of apples, with different prices on each basket to her students. She asked them to combine baskets 
+and set a new price for the combined baskets by following the below process.
+
+• In the given baskets, if the GCD of the prices of any two
+adjacent baskets is greater than 1, then combine the two baskets of apples into one basket. . When two baskets are being combined, the price of the
+combined basket should be the LCM (Least Common Multiplel of
+those two baskets prices. . Students must continue this process as long as the GCD of the
+prices of any two adjacent baskets is greater than one,
+
+Write a program to solve the above problem and print the final basket prices.
+
+Input
+The first line of input contains an integer T , representing the number of test cases. The next T* 2 lines of input contain an integer N 
+representing the number of baskets and the N number of spaceseparated integers representing the prices of each basket.
+
+Output
+The output should be T lines containing space-separated Integers representing final basket prices.
+
+Explanation
+For example, if the given test cases are 2,
+Test case 1:
+N = 6
+prices = 12 4 2 3 6 7
+
+•12,4 are two adjacent basket prices whose GCD is greater than 1, so combine the two baskets of apples into one basket and use their respective LCM 
+as their basket price i,e 12 As a result, there will be 5 new baskets, and their prices will be 12 2 3 6 7
+•12, 2 are two adjacent basket prices whose GCD is greater than 1, so combine the two baskets of apples into one basket and use their respective LCM 
+as their basket price i,e 12 As a result, there will be 4 new baskets, and their prices will be 12 3 6 7
+•12,3 are two adjacent basket prices whose GCD is greater than 1 so combine the two baskets of apples into one basket and use their respective LCM 
+as their basket price i,e 12 As a result, there will be 3 new baskets, and their prices will be 12 6 7
+.12,6 are two adjacent basket prices whose GCD is greater than 1 so combine the two baskets of apples into one basket and use their respective LCM 
+as their basket price i,e 12 As a result, there will be 2 new baskets, and their prices will be 12 7
+
+So output is 12 7
+
+Test case 2: N = 7. prices = 2 2 1 1 3 3 3
+
+•2,2 are two adjacent basket prices whose GCD is greater than 1. so combine the two baskets of apples into one basket and use their respective LCM 
+as their basket price ie 2. As a result, there will be 6 new baskets, and their prices will be 2 1 1 3 3 3.
+•3,3 are two adjacent basket prices whose GCD is greater than 1. so combine the two baskets of apples into one basket and use their respective LCM 
+as their basket price ie 3 As a result, there will be 5 new baskets, and their prices will be 2 1 1 3 3
+•3,3 are two adjacent basket prices whose GCD is greater than 1. so combine the two baskets of apples into one basket and use their respective LCM 
+as their basket pricele 3 As a result, there will be 4 new baskets, and their prices will be 2 1 1 3
+• There are no two adjacent basket prices whose GCD is Greater than one
+
+So the output is 2 1 1 3
